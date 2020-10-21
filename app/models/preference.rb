@@ -1,12 +1,11 @@
 class Preference < ActiveRecord::Base
 
-  def allow_create_songs(bool)
-    binding.pry
-    allow_create_songs = bool
+  def allow_create_songs
+    
   end
 
-  def allow_create_artists(bool)
-    allow_create_songs = bool
+  def allow_create_artists
+
   end
 
 end
