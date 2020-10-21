@@ -8,8 +8,10 @@ class ArtistsController < ApplicationController
   end
 
   def new
-    binding.pry
-    @artist = Artist.new
+    if params.permitted?
+      @artist = Artist.new
+    else
+      redirect_to artists_path
   end
 
   def create
