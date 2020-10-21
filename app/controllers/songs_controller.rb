@@ -25,6 +25,8 @@ class SongsController < ApplicationController
   end
 
   def new
+    binding.pry
+    #if params.permitted?
     @song = Song.new
   end
 
