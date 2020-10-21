@@ -25,9 +25,11 @@ class SongsController < ApplicationController
   end
 
   def new
-    binding.pry
-    #if params.permitted?
-    @song = Song.new
+    if params.permitted?
+      @song = Song.new
+    else 
+      redirect_to songs_path
+    end
   end
 
   def create
