@@ -1,7 +1,7 @@
 class Preference < ActiveRecord::Base
 
   def allow_create_songs
-    binding.pry
+    allow_create_songs = false
   end
 
   def allow_create_artists
